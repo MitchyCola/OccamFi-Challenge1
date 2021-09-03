@@ -1,0 +1,42 @@
+# Resolver to choose a 'specific' stackage snapshot or a compiler version.
+# A snapshot resolver dictates the compiler version and the set of packages
+# to be used for project dependencies. For example:
+
+resolver: lts-17.12
+
+# User packages to be built.
+# Various formats can be used as shown in the example below.
+
+packages:
+- .
+
+# Dependency packages to be pulled from upstream that are not in the resolver.
+# These entries can reference officially published versions as well as
+# forks / in-progress versions pinned to a git hash. For example:
+#
+# extra-deps:
+# - acme-missiles-0.3
+# - git: https://github.com/commercialhaskell/stack.git
+#   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
+#
+extra-deps:
+- git: https://github.com/input-output-hk/cardano-addresses/
+  commit: 984b07911ebd0b56c2ce4c60c6db81221287074c
+  subdirs:
+    - core
+- git: https://github.com/input-output-hk/cardano-crypto
+  commit: 2547ad1e80aeabca2899951601079408becbc92c
+- base58-bytestring-0.1.0
+- bech32-1.0.2
+- bech32-th-1.0.2
+
+allow-newer: true
+
+flags:
+  # Using RDRAND instead of /dev/urandom as an entropy source for key
+  # generation is dubious. Set the flag so we use /dev/urandom by default.
+  cryptonite:
+    support_rdrand: false
+
+# Control whether we use the GHC we find on the path
+# system-ghc: true

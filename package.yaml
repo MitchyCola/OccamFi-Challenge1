@@ -1,0 +1,31 @@
+name:                OccamFi-Challenge1
+version:             0.1.0.0
+github:              "MitchyCola/AdaMkaerSpace-Hackathon/OccamFi-Challenge1"
+license:             BSD3
+author:              "Mitch Notarnicola"
+maintainer:          "mitch.notanricola@protonmail.com"
+copyright:           "2021 Mitch Notarnicola"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/MitchyCola/AdaMakerSpace-Hackathon/OccamFi-Challenge1#readme>
+
+allow-newer: true
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+    - cardano-addresses
+    - cardano-crypto

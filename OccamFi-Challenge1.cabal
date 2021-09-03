@@ -1,0 +1,38 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           OccamFi-Challenge1
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/MitchyCola/AdaMakerSpace-Hackathon/OccamFi-Challenge1#readme>
+homepage:       https://github.com/MitchyCola/AdaMkaerSpace-Hackathon#readme
+bug-reports:    https://github.com/MitchyCola/AdaMkaerSpace-Hackathon/issues
+author:         Mitch Notarnicola
+maintainer:     mitch.notanricola@protonmail.com
+copyright:      2021 Mitch Notarnicola
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/MitchyCola/AdaMkaerSpace-Hackathon
+  subdir: OccamFi-Challenge1
+
+library
+  exposed-modules:
+      RandoAddr
+  other-modules:
+      Paths_OccamFi_Challenge1
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , cardano-addresses
+    , cardano-crypto
+  default-language: Haskell2010
